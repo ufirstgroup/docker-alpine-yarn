@@ -1,6 +1,7 @@
 FROM mhart/alpine-node:6.8.0
 
 MAINTAINER Jean-Luc Geering <jeanluc.geering@ufirstgroup.com>
+MAINTAINER Michael Ruoss <michael.ruoss@ufirstgroup.com>
 
 # install packages (su-exec and various build dependencies)
 
