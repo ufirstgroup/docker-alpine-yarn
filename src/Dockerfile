@@ -5,10 +5,11 @@ MAINTAINER Jean-Luc Geering <jeanluc.geering@ufirstgroup.com>
 # install packages (su-exec and various build dependencies)
 
 RUN apk update && apk upgrade && apk add \
-  g++=5.3.0-r0 \
-  make=4.1-r1 \
-  python=2.7.12-r0 \
-  su-exec=0.2-r0
+  g++ \
+  make \
+  python \
+  su-exec \
+  git
 
 # install yarn
 
