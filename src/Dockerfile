@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:6.8.0
+FROM ufirstgroup/alpine-npm:6.8.1_3.10.8
 
 MAINTAINER Jean-Luc Geering <jeanluc.geering@ufirstgroup.com>
 MAINTAINER Michael Ruoss <michael.ruoss@ufirstgroup.com>
@@ -9,7 +9,6 @@ RUN apk update && apk upgrade && apk add \
   g++ \
   make \
   python \
-  su-exec \
   git
 
 # install yarn
@@ -28,5 +27,5 @@ VOLUME ["/workdir", "/homedir"]
 
 COPY entrypoint.sh /
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/sbin/tini", "--", "/entrypoint.sh"]
 CMD ["yarn"]

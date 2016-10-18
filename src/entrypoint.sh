@@ -1,4 +1,4 @@
-#!/bin/ash
+#!/bin/bash
 
 if [ -z "$USER_ID" ]; then
   echo "USER_ID is required - you may use \$(id -u)"
