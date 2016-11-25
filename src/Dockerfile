@@ -13,7 +13,7 @@ RUN apk update && apk upgrade && apk add \
 
 # install yarn
 
-ENV YARN_VERSION 0.16.1
+ENV YARN_VERSION 0.17.8
 RUN npm install --global yarn@${YARN_VERSION}
 
 USER root
