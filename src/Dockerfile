@@ -1,4 +1,4 @@
-FROM ufirstgroup/alpine-npm:6.9.2_3.10.10
+FROM ufirstgroup/alpine-npm:6.9.5_3.10.10
 
 MAINTAINER Jean-Luc Geering <jeanluc.geering@ufirstgroup.com>
 MAINTAINER Michael Ruoss <michael.ruoss@ufirstgroup.com>
@@ -13,7 +13,7 @@ RUN apk update && apk upgrade && apk add \
 
 # install yarn
 
-ENV YARN_VERSION 0.18.1
+ENV YARN_VERSION 0.20.3
 RUN npm install --global yarn@${YARN_VERSION}
 
 USER root
