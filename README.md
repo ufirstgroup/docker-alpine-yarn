@@ -8,5 +8,5 @@ docker run -it --rm \
   -e GROUP_ID=`id -g` \
   -v $HOME:/homedir \
   -v `pwd -P`:/workdir  \
-  ufirstgroup/alpine-yarn:0.21.3 yarn
+  ufirstgroup/alpine-yarn:0.23.4 yarn
 ```
