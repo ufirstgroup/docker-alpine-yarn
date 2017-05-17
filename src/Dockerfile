@@ -14,7 +14,12 @@ RUN apk update && apk upgrade && apk add \
 # install yarn
 
 ENV YARN_VERSION 0.23.4
-RUN npm install --global yarn@${YARN_VERSION}
+RUN apk add --no-cache --virtual .yarn-deps curl gnupg tar && \
+  mkdir -p /opt && \
+  curl -sL https://yarnpkg.com/downloads/${YARN_VERSION}/yarn-v${YARN_VERSION}.tar.gz | tar xz -C /opt && \
+  mv /opt/dist /opt/yarn && \
+  ln -s /opt/yarn/bin/yarn /usr/local/bin && \
+  apk del .yarn-deps
 
 USER root
 
