@@ -21,6 +21,10 @@ RUN apk add --no-cache --virtual .yarn-deps curl gnupg tar && \
   ln -s /opt/yarn/bin/yarn /usr/local/bin && \
   apk del .yarn-deps
 
+# install node-gyp
+
+RUN /usr/local/bin/yarn global add node-gyp
+
 USER root
 
 WORKDIR "/workdir"
