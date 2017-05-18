@@ -1,4 +1,4 @@
-FROM ufirstgroup/alpine-node:7.10.0
+FROM ufirstgroup/alpine-npm:7.10.0_4.5.0
 
 MAINTAINER Jean-Luc Geering <jeanluc.geering@ufirstgroup.com>
 MAINTAINER Michael Ruoss <michael.ruoss@ufirstgroup.com>
